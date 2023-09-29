@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+{{#if exito}}
+<p>Hola {{nombre}} eres mayor de edad. Bienvenido! <a href="/salir">Salir</a></p>
+{{/if}}
+
+{{#unless exito}}
+<p>{{msgError}}</p>
+<form action="/ingresar" method="post">
+    Nombre <input type="text" name="nombre" value="{{nombre}}"/>
+    Edad   <input type="text" name="edad" value="{{edad}}"/>
+    <button>ingresar</button>
+</form>
+{{/unless}}
